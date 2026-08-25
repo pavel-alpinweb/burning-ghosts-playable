@@ -1,0 +1,17 @@
+{
+        "root": true,
+        "parser": "vue-eslint-parser",
+        "extends": [
+                "plugin:vue/strongly-recommended",
+                "eslint:recommended",
+                "prettier"
+        ],
+        "plugins": ["prettier"],
+        "rules": {
+                "prettier/prettier": "error",
+                "vue/multi-word-component-names": "off",
+                "semi": ["error", "always"],
+                "linebreak-style": ["off"],
+                "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 100 }]
+        }
+}

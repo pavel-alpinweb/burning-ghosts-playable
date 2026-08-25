@@ -1,0 +1,366 @@
+{ "compressionlevel":-1,
+ "height":20,
+ "infinite":true,
+ "layers":[
+        {
+         "chunks":[
+                {
+                 "data":[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+                 "height":16,
+                 "width":16,
+                 "x":0,
+                 "y":-16
+                }, 
+                {
+                 "data":[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3],
+                 "height":16,
+                 "width":16,
+                 "x":16,
+                 "y":-16
+                }, 
+                {
+                 "data":[3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+                 "height":16,
+                 "width":16,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "data":[1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+                 "height":16,
+                 "width":16,
+                 "x":16,
+                 "y":0
+                }],
+         "height":32,
+         "id":1,
+         "locked":true,
+         "name":"ground_layer",
+         "opacity":1,
+         "startx":0,
+         "starty":-16,
+         "type":"tilelayer",
+         "visible":true,
+         "width":32,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":3,
+         "locked":true,
+         "name":"door_layer",
+         "objects":[
+                {
+                 "gid":4,
+                 "height":60,
+                 "id":15,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"door"
+                        }],
+                 "rotation":0,
+                 "type":"Door",
+                 "visible":true,
+                 "width":60,
+                 "x":929,
+                 "y":32
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"heart_layer",
+         "objects":[
+                {
+                 "gid":8,
+                 "height":32,
+                 "id":16,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":840,
+                 "y":120
+                }, 
+                {
+                 "gid":8,
+                 "height":32,
+                 "id":21,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":720,
+                 "y":-60
+                }, 
+                {
+                 "gid":8,
+                 "height":32,
+                 "id":22,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":960,
+                 "y":360
+                }, 
+                {
+                 "gid":8,
+                 "height":32,
+                 "id":23,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":960,
+                 "y":-240
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":5,
+         "name":"bomb_layer",
+         "objects":[
+                {
+                 "gid":7,
+                 "height":60,
+                 "id":17,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":1020,
+                 "y":120
+                }, 
+                {
+                 "gid":7,
+                 "height":60,
+                 "id":18,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":1080,
+                 "y":0
+                }, 
+                {
+                 "gid":7,
+                 "height":60,
+                 "id":19,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":1140,
+                 "y":240
+                }, 
+                {
+                 "gid":7,
+                 "height":60,
+                 "id":20,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":660,
+                 "y":120
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":6,
+ "nextobjectid":24,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.2",
+ "tileheight":60,
+ "tilesets":[
+        {
+         "columns":3,
+         "firstgid":1,
+         "image":"..\/tiles\/ground_tiles.jpg",
+         "imageheight":60,
+         "imagewidth":180,
+         "margin":0,
+         "name":"ground_tiles",
+         "spacing":0,
+         "tilecount":3,
+         "tileheight":60,
+         "tiles":[
+                {
+                 "id":2,
+                 "probability":0.5
+                }],
+         "tilewidth":60
+        }, 
+        {
+         "columns":0,
+         "firstgid":4,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"door_tiles",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":60,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/tiles\/door.png",
+                 "imageheight":60,
+                 "imagewidth":60
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/tiles\/door2.png",
+                 "imageheight":60,
+                 "imagewidth":60
+                }],
+         "tilewidth":60
+        }, 
+        {
+         "firstgid":7,
+         "source":"..\/tilesets\/heart_tiles.tsx"
+        }],
+ "tilewidth":60,
+ "type":"map",
+ "version":"1.10",
+ "width":30
+}

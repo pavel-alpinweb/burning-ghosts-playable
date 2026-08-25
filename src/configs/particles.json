@@ -1,0 +1,43 @@
+{
+  "textures": [
+    {
+      "key": "smoke-puff-particle",
+      "filePath": "assets/vfx/smoke-puff.png"
+    }
+  ],
+  "VFX": {
+    "dust": {
+      "followOffsetYFactor": -0.6,
+      "textureKey": "smoke-puff-particle",
+      "lifespan": 850,
+      "speed": {
+        "min": 14,
+        "max": 25
+      },
+      "scale": {
+        "start": 0.4,
+        "end": 2
+      },
+      "quantity": 1,
+      "gravityY": -80,
+      "particleSizePx": 35,
+      "angle": {
+        "min": 300,
+        "max": 320
+      },
+      "followOffsetX": 0.5,
+      "blendMode": "NORMAL",
+      "depthOffset": -1,
+      "rotate": {
+        "min": 0,
+        "max": 360
+      },
+      "tint": 10518624,
+      "frequency": 60,
+      "alpha": {
+        "start": 0.6,
+        "end": 0
+      }
+    }
+  }
+}

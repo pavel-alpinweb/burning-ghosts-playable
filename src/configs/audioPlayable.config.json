@@ -1,0 +1,42 @@
+[
+  {
+    "key": "explosion",
+    "filePath": "audio/explosion.mp3",
+    "ignoreIfPlaying": false,
+    "volume": 0.5,
+    "loop": false,
+    "fadeInMs": 0
+  },
+  {
+    "key": "glitter",
+    "filePath": "audio/glitter.mp3",
+    "ignoreIfPlaying": false,
+    "volume": 0.5,
+    "loop": false,
+    "fadeInMs": 0
+  },
+  {
+    "key": "mountains-sounds",
+    "filePath": "audio/mountains-sounds-min.mp3",
+    "ignoreIfPlaying": true,
+    "volume": 0.5,
+    "loop": true,
+    "fadeInMs": 0
+  },
+  {
+    "key": "player-wait",
+    "filePath": "audio/idle-sound.mp3",
+    "ignoreIfPlaying": true,
+    "volume": 0.5,
+    "loop": true,
+    "fadeInMs": 0
+  },
+  {
+    "key": "player-move",
+    "filePath": "audio/move-sound.mp3",
+    "ignoreIfPlaying": true,
+    "volume": 0.5,
+    "loop": true,
+    "fadeInMs": 0
+  }
+]

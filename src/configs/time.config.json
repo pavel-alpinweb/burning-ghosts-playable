@@ -1,0 +1,11 @@
+{
+  "morningInMs": 5000,
+  "afternoonInMs": 5000,
+  "eveningInMs": 5000,
+  "nightInMs": 5000,
+  "startDayPhase": "morning",
+  "morningPhaseTransitionFraction": 0.2,
+  "afternoonPhaseTransitionFraction": 0.2,
+  "eveningPhaseTransitionFraction": 0.2,
+  "nightPhaseTransitionFraction": 0.2
+}

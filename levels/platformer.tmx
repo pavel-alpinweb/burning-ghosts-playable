@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="60" tileheight="60" infinite="1" nextlayerid="6" nextobjectid="28">
+ <editorsettings>
+  <export target="../public/assets/levels/tilemaps/platformer.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="platform" tilewidth="60" tileheight="60" tilecount="1" columns="1">
+  <image source="../public/assets/levels/tiles/platform.png" width="60" height="60"/>
+ </tileset>
+ <tileset firstgid="2" name="door_tiles" tilewidth="60" tileheight="60" tilecount="2" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../public/assets/levels/tiles/door2.png" width="60" height="60"/>
+  </tile>
+  <tile id="1">
+   <image source="../public/assets/levels/tiles/door.png" width="60" height="60"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="4" name="heart_level" tilewidth="60" tileheight="60" tilecount="2" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../public/assets/levels/tiles/bomb.png" width="60" height="60"/>
+  </tile>
+  <tile id="1">
+   <image source="../public/assets/levels/tiles/heart.png" width="32" height="32"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="6" source="../public/assets/levels/tilesets/heart_tiles.tsx"/>
+ <layer id="1" name="Platforms" width="30" height="20">
+  <data encoding="csv">
+   <chunk x="-32" y="0" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-32" y="16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,
+0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-16" y="16" width="16" height="16">
+1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+  </data>
+ </layer>
+ <objectgroup id="3" name="object_layer">
+  <object id="3" gid="2" x="-960" y="240" width="60" height="60">
+   <properties>
+    <property name="imageName" value="door2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="heart_layer">
+  <object id="23" type="Heart" gid="7" x="-1320" y="1500" width="32" height="32">
+   <properties>
+    <property name="imageName" value="heart"/>
+   </properties>
+  </object>
+  <object id="24" type="Heart" gid="7" x="-1380" y="960" width="32" height="32">
+   <properties>
+    <property name="imageName" value="heart"/>
+   </properties>
+  </object>
+  <object id="25" type="Heart" gid="7" x="-1080" y="720" width="32" height="32">
+   <properties>
+    <property name="imageName" value="heart"/>
+   </properties>
+  </object>
+  <object id="26" type="Heart" gid="7" x="-1500" y="360" width="32" height="32">
+   <properties>
+    <property name="imageName" value="heart"/>
+   </properties>
+  </object>
+  <object id="27" type="Heart" gid="7" x="-1380" y="1680" width="32" height="32">
+   <properties>
+    <property name="imageName" value="heart"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="bomb_layer">
+  <object id="21" type="Bomb" gid="6" x="-1140" y="240" width="60" height="60">
+   <properties>
+    <property name="imageName" value="bomb"/>
+   </properties>
+  </object>
+  <object id="20" type="Bomb" gid="6" x="-1440" y="600" width="60" height="60">
+   <properties>
+    <property name="imageName" value="bomb"/>
+   </properties>
+  </object>
+  <object id="19" type="Bomb" gid="6" x="-1620" y="1080" width="60" height="60">
+   <properties>
+    <property name="imageName" value="bomb"/>
+   </properties>
+  </object>
+  <object id="22" type="Bomb" gid="6" x="-1680" y="1560" width="60" height="60">
+   <properties>
+    <property name="imageName" value="bomb"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

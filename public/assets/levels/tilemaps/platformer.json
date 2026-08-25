@@ -1,0 +1,406 @@
+{ "compressionlevel":-1,
+ "height":20,
+ "infinite":true,
+ "layers":[
+        {
+         "chunks":[
+                {
+                 "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                 "height":16,
+                 "width":16,
+                 "x":-32,
+                 "y":0
+                }, 
+                {
+                 "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                 "height":16,
+                 "width":16,
+                 "x":-16,
+                 "y":0
+                }, 
+                {
+                 "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0,
+                    0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                 "height":16,
+                 "width":16,
+                 "x":-32,
+                 "y":16
+                }, 
+                {
+                 "data":[1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                 "height":16,
+                 "width":16,
+                 "x":-16,
+                 "y":16
+                }],
+         "height":48,
+         "id":1,
+         "name":"Platforms",
+         "opacity":1,
+         "startx":-48,
+         "starty":0,
+         "type":"tilelayer",
+         "visible":true,
+         "width":64,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":3,
+         "name":"object_layer",
+         "objects":[
+                {
+                 "gid":2,
+                 "height":60,
+                 "id":3,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"door2"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":60,
+                 "x":-960,
+                 "y":240
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"heart_layer",
+         "objects":[
+                {
+                 "gid":7,
+                 "height":32,
+                 "id":23,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":-1320,
+                 "y":1500
+                }, 
+                {
+                 "gid":7,
+                 "height":32,
+                 "id":24,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":-1380,
+                 "y":960
+                }, 
+                {
+                 "gid":7,
+                 "height":32,
+                 "id":25,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":-1080,
+                 "y":720
+                }, 
+                {
+                 "gid":7,
+                 "height":32,
+                 "id":26,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":-1500,
+                 "y":360
+                }, 
+                {
+                 "gid":7,
+                 "height":32,
+                 "id":27,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"heart"
+                        }],
+                 "rotation":0,
+                 "type":"Heart",
+                 "visible":true,
+                 "width":32,
+                 "x":-1380,
+                 "y":1680
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":5,
+         "name":"bomb_layer",
+         "objects":[
+                {
+                 "gid":6,
+                 "height":60,
+                 "id":21,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":-1140,
+                 "y":240
+                }, 
+                {
+                 "gid":6,
+                 "height":60,
+                 "id":20,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":-1440,
+                 "y":600
+                }, 
+                {
+                 "gid":6,
+                 "height":60,
+                 "id":19,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":-1620,
+                 "y":1080
+                }, 
+                {
+                 "gid":6,
+                 "height":60,
+                 "id":22,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"imageName",
+                         "type":"string",
+                         "value":"bomb"
+                        }],
+                 "rotation":0,
+                 "type":"Bomb",
+                 "visible":true,
+                 "width":60,
+                 "x":-1680,
+                 "y":1560
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":6,
+ "nextobjectid":28,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.1-99-gec89c545",
+ "tileheight":60,
+ "tilesets":[
+        {
+         "columns":1,
+         "firstgid":1,
+         "image":"..\/tiles\/platform.png",
+         "imageheight":60,
+         "imagewidth":60,
+         "margin":0,
+         "name":"platform",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":60,
+         "tilewidth":60
+        }, 
+        {
+         "columns":0,
+         "firstgid":2,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"door_tiles",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":60,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/tiles\/door2.png",
+                 "imageheight":60,
+                 "imagewidth":60
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/tiles\/door.png",
+                 "imageheight":60,
+                 "imagewidth":60
+                }],
+         "tilewidth":60
+        }, 
+        {
+         "columns":0,
+         "firstgid":4,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"heart_level",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":60,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/tiles\/bomb.png",
+                 "imageheight":60,
+                 "imagewidth":60
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/tiles\/heart.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }],
+         "tilewidth":60
+        }, 
+        {
+         "firstgid":6,
+         "source":"..\/tilesets\/heart_tiles.tsx"
+        }],
+ "tilewidth":60,
+ "type":"map",
+ "version":"1.10",
+ "width":30
+}

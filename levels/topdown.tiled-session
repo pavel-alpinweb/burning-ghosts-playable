@@ -1,0 +1,140 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Mark/OneDrive/Desktop/ground_tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "D:/JS/phaser-vue-start-template/public/assets/levels/tiles/ground_tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/JS/phaser-vue-start-template/public/assets/levels/tilesets/heart_tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "platformer.tmx": {
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
+            "scale": 0.5,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": -996,
+                "y": 1010
+            }
+        },
+        "platformer.tmx#door_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "platformer.tmx#heart_level": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "platformer.tmx#heart_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "platformer.tmx#platform": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "tilesets/heart_tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx": {
+            "expandedObjectLayers": [
+                4,
+                5,
+                3
+            ],
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 948,
+                "y": -14
+            }
+        },
+        "topdown.tmx#Grass": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#Sand": {
+            "scaleInDock": 1
+        },
+        "topdown.tmx#Water": {
+            "scaleInDock": 1
+        },
+        "topdown.tmx#door": {
+            "dynamicWrapping": true,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#door_tiles": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#ground-tiles": {
+            "dynamicWrapping": false,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#ground_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#heart_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "topdown.tmx#interactive_tiles": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "D:/JS/phaser-vue-start-template/public/assets/levels/tilemaps",
+    "last.externalTilesetPath": "D:/JS/phaser-vue-start-template/public/assets/levels/tilesets",
+    "last.imagePath": "D:/JS/phaser-vue-start-template/public/assets/levels/tiles",
+    "map.fixedSize": false,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 287,
+    "map.tileWidth": 329,
+    "openFiles": [
+    ],
+    "project": "topdown.tiled-project",
+    "recentFiles": [
+        "topdown.tmx",
+        "platformer.tmx",
+        "D:/JS/phaser-vue-start-template/public/assets/levels/tilesets/heart_tiles.tsx",
+        "tilesets/heart_tiles.tsx",
+        "D:/JS/phaser-vue-start-template/public/assets/levels/tiles/ground_tiles.tsx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.tileSize": {
+        "height": 60,
+        "width": 60
+    },
+    "tileset.type": 1
+}

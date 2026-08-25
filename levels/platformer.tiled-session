@@ -1,0 +1,50 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "platformer.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "platformer.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -746.969696969697,
+                "y": 987.8787878787879
+            }
+        },
+        "platformer.tmx#door_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "platformer.tmx#platform": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "/home/alpinweb/works/phaser-vue-start-template/public/assets/levels/tilemaps",
+    "last.imagePath": "/home/alpinweb/works/phaser-vue-start-template/public/assets/levels/tiles",
+    "map.fixedSize": false,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 138,
+    "map.tileWidth": 138,
+    "openFiles": [
+        "platformer.tmx"
+    ],
+    "project": "platformer.tiled-project",
+    "recentFiles": [
+        "platformer.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 60,
+        "width": 60
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "language_label": {
+    "en": "EN",
+    "ru": "RU"
+  },
+  "start_button": {
+    "en": "Start",
+    "ru": "Начать"
+  },
+  "main_title": {
+    "en": "Charlie",
+    "ru": "Чарли"
+  },
+  "main_description": {
+    "en": "HTML5 Game Toolkit",
+    "ru": "Набор инструментов для HTML5 игр"
+  },
+  "loading": {
+    "en": "Loading",
+    "ru": "Загрузка"
+  }
+}
