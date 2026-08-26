@@ -54,9 +54,10 @@ export const playerComposition = {
     return player;
   },
 
-  configureCameraFollow(scene, player, deadzoneWidth, deadzoneHeight) {
+  configureCameraFollow(scene, player, deadzoneWidth, deadzoneHeight, zoom = 1) {
     scene.cameras.main.startFollow(player);
     scene.cameras.main.setDeadzone(deadzoneWidth, deadzoneHeight);
+    scene.cameras.main.setZoom(zoom);
   },
 
   movePlayerOnTopDown(player, userInput, scene) {

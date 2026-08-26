@@ -17,15 +17,14 @@ export default class PlayableScene extends Phaser.Scene {
 
   create() {
     playableComposition.preparePlayerAnimations(this);
-    const [map, groundLayer, doorLayer, heartLayer, bombLayer] = topdownMapComposition.createLevel(this);
+    const [map, groundLayer, playerSpawnLayer, wallsLayer] = topdownMapComposition.createLevel(this);
     this.map = map;
     this.groundLayer = groundLayer;
-    const playerPosition = playableComposition.findClosestGroundPosition(groundLayer, this.scale.width / 2, this.scale.height / 2);
 
     this.player = playerComposition.createPlayer(
       this,
-      playerPosition.x,
-      playerPosition.y,
+      playerSpawnLayer.x,
+      playerSpawnLayer.y,
       Config.PLAYER_DISPLAY_WIDTH,
       Config.PLAYER_DISPLAY_HEIGHT,
       Config.PLAYER_TOPDOWN_BODY_WIDTH,
@@ -36,15 +35,10 @@ export default class PlayableScene extends Phaser.Scene {
     playableComposition.updateHealthBar(this.player, "#health-bar");
     particlesComposition.initObjectVFX(this, this.player, ["dust"], particlesConfig);
 
-    playerComposition.configureCameraFollow(this, this.player, this.cameras.main.width / 4, this.cameras.main.height / 4);
+    playerComposition.configureCameraFollow(this, this.player, this.cameras.main.width / 4, this.cameras.main.height / 4, 0.7);
 
     this.physics.add.collider(this.player, groundLayer);
-    this.physics.add.overlap(this.player, heartLayer, (_player, heart) => {
-      playableComposition.handleHeartCollision(this, this.player, heart, "#health-bar");
-    });
-    this.physics.add.overlap(this.player, bombLayer, (_player, bomb) => {
-      playableComposition.handleBombCollision(this, this.player, bomb, "#health-bar");
-    });
+    this.physics.add.collider(this.player, wallsLayer);
 
     this.input.on("pointerdown", (pointer) => {
       playerComposition.updatePlayerAimFromPointer(this, this.player, this.groundLayer, pointer);

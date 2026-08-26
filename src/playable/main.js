@@ -12,7 +12,7 @@ smoudComposition.init((width, height) => {
 
   new Phaser.Game({
     type: Phaser.AUTO,
-    backgroundColor: "#00bfdf",
+    backgroundColor: "#808180",
     scene: [PreloadScenePlayable, PlayableScene],
     scale: {
       width: gameWidth,

@@ -4,10 +4,7 @@ import playerWaitPNG from "@public/assets/animation/16x/idle.png";
 import playerWaitJSON from "@public/assets/animation/16x/idle.json";
 import playerMovePNG from "@public/assets/animation/16x/run.png";
 import playerMoveJSON from "@public/assets/animation/16x/run.json";
-import groundTiles from "@public/assets/levels/tiles/ground_tiles.jpg";
-import door from "@public/assets/levels/tiles/door.png";
-import bomb from "@public/assets/levels/tiles/bomb.png";
-import heart from "@public/assets/levels/tiles/heart.png";
+import floor from "@public/assets/levels/tiles/floor-wall-roof.png";
 import topdownTilemap from "@public/assets/levels/tilemaps/topdown.json";
 import { BOMB_DAMAGE, HEAL_VALUE } from "@/configs/gameplay.config.js";
 import { smoudComposition } from "@/compositions/Smoud.composition.js";
@@ -19,10 +16,7 @@ export const playableComposition = {
   },
 
   preloadLevel(scene) {
-    scene.load.image("ground_tiles", groundTiles);
-    scene.load.image("door", door);
-    scene.load.image("bomb", bomb);
-    scene.load.image("heart", heart);
+    scene.load.image("floor-wall-roof", floor);
     scene.load.tilemapTiledJSON("topdown-tilemap", topdownTilemap);
   },
 
@@ -74,34 +68,6 @@ export const playableComposition = {
     document.querySelector("#splash")?.remove();
   },
 
-  findClosestGroundPosition(groundLayer, targetX, targetY) {
-    let closestTile = null;
-    let closestDistance = Infinity;
-
-    groundLayer.forEachTile((tile) => {
-      const isGround = tile.index === 1 || tile.index === 2;
-      const isWater = groundLayer.getTileAt(tile.x, tile.y)?.index === 3;
-
-      if (!isGround || isWater) return;
-
-      const distance = Phaser.Math.Distance.Squared(targetX, targetY, tile.getCenterX(), tile.getCenterY());
-
-      if (distance < closestDistance) {
-        closestTile = tile;
-        closestDistance = distance;
-      }
-    });
-
-    if (!closestTile) {
-      throw new Error("Unable to find a ground tile for the player spawn point");
-    }
-
-    return {
-      x: closestTile.getCenterX(),
-      y: closestTile.getCenterY(),
-    };
-  },
-
   updateHealthBar(player, element) {
     const healthBar = typeof element === "string" ? document.querySelector(element) : element;
 
@@ -122,27 +88,5 @@ export const playableComposition = {
 
     healthBar.setAttribute("aria-valuenow", String(currentHealth));
     healthBar.setAttribute("aria-valuemax", String(maxHealth));
-  },
-
-  handleHeartCollision(scene, player, heart, healthBarSelector) {
-    player.currentHealth = Math.min(player.maxHealth, player.currentHealth + HEAL_VALUE);
-    heart.setActive(false).setVisible(false);
-    heart.body.enable = false;
-    audioComposition.play(scene, "glitter");
-    this.updateHealthBar(player, healthBarSelector);
-    smoudComposition.onceInteraction(() => {
-      console.log("[Playable] Heart interaction triggered", player.currentHealth);
-    });
-  },
-
-  handleBombCollision(scene, player, bomb, healthBarSelector) {
-    player.currentHealth = Math.max(0, player.currentHealth - BOMB_DAMAGE);
-    bomb.setActive(false).setVisible(false);
-    bomb.body.enable = false;
-    audioComposition.play(scene, "explosion");
-    this.updateHealthBar(player, healthBarSelector);
-    smoudComposition.onceInteraction(() => {
-      console.log("[Playable] Bomb interaction triggered", player.currentHealth);
-    });
   },
 };

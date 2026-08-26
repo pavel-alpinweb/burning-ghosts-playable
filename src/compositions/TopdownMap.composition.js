@@ -12,11 +12,10 @@ export const topdownMapComposition = {
   createLevel(scene) {
     const map = scene.make.tilemap({ key: "topdown-tilemap" });
 
-    const groundLayer = tilemapComposition.createTileLayer(map, "ground_tiles", "ground_layer", [3]);
-    const doorLayer = tilemapComposition.createObjectLayer(scene, map, "door_layer");
-    const heartLayer = tilemapComposition.createObjectLayer(scene, map, "heart_layer");
-    const bombLayer = tilemapComposition.createObjectLayer(scene, map, "bomb_layer");
+    const groundLayer = tilemapComposition.createTileLayer(map, "floor-wall-roof", "ground_layer", [0]);
+    const wallsLayer = tilemapComposition.createTileLayer(map, "floor-wall-roof", "walls_layer", [1]);
+    const playerSpawnLayer = tilemapComposition.getFromObjectLayer(map, "spawns_layer", { name: "playerSpawn" });
 
-    return [map, groundLayer, doorLayer, heartLayer, bombLayer];
+    return [map, groundLayer, playerSpawnLayer, wallsLayer];
   }
 };
