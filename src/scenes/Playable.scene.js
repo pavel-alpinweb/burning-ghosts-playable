@@ -33,7 +33,6 @@ export default class PlayableScene extends Phaser.Scene {
       Config.PLAYER_MAX_HEALTH
     );
     playableComposition.updateHealthBar(this.player, "#health-bar");
-    particlesComposition.initObjectVFX(this, this.player, ["dust"], particlesConfig);
 
     playerComposition.configureCameraFollow(this, this.player, this.cameras.main.width / 4, this.cameras.main.height / 4, 0.7);
 

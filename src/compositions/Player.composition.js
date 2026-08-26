@@ -129,7 +129,7 @@ export const playerComposition = {
     const horizontalDistanceToAim = directionToAim.x;
     const deltaInSeconds = Math.max(delta, 1) / 1000;
 
-    if (distanceToAim <= 1) {
+    if (distanceToAim <= 60) {
       player.body.setVelocity(0);
       player.currentDirectional.set(0);
       handlePlayerTopDownState(player, scene, false);

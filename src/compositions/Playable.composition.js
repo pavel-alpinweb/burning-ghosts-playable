@@ -1,13 +1,11 @@
 import Phaser from "phaser";
 import { audioComposition } from "@/compositions/Audio.composition.js";
-import playerWaitPNG from "@public/assets/animation/16x/idle.png";
-import playerWaitJSON from "@public/assets/animation/16x/idle.json";
-import playerMovePNG from "@public/assets/animation/16x/run.png";
-import playerMoveJSON from "@public/assets/animation/16x/run.json";
+import playerWaitPNG from "@public/assets/animation/player/player-idle.png";
+import playerWaitJSON from "@public/assets/animation/player/player-idle.json";
+import playerMovePNG from "@public/assets/animation/player/player-run.png";
+import playerMoveJSON from "@public/assets/animation/player/player-run.json";
 import floor from "@public/assets/levels/tiles/floor-wall-roof.png";
 import topdownTilemap from "@public/assets/levels/tilemaps/topdown.json";
-import { BOMB_DAMAGE, HEAL_VALUE } from "@/configs/gameplay.config.js";
-import { smoudComposition } from "@/compositions/Smoud.composition.js";
 
 export const playableComposition = {
   preloadPlayerAnimation(scene) {
@@ -24,7 +22,7 @@ export const playableComposition = {
     scene.anims.create({
       key: "player_wait",
       frames: scene.anims.generateFrameNames("player_wait"),
-      frameRate: 24,
+      frameRate: 16,
       repeat: -1,
     });
     scene.anims.create({
