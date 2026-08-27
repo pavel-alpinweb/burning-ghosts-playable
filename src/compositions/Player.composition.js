@@ -173,10 +173,8 @@ function handlePlayerTopDownState(player, scene, isMoving) {
   if (!isMoving) {
     player.anims.play("player_wait", true);
     audioComposition.stop(scene, "player-move");
-    audioComposition.play(scene, "player-wait");
   } else {
     player.anims.play("player_move", true);
-    audioComposition.stop(scene, "player-wait");
     audioComposition.play(scene, "player-move");
   }
 }
