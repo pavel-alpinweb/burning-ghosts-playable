@@ -70,6 +70,9 @@ collections:
           - { label: "PLAYER_CURRENT_HEALTH", name: "PLAYER_CURRENT_HEALTH", widget: "number" }
           - { label: "HEAL_VALUE", name: "HEAL_VALUE", widget: "number" }
           - { label: "BOMB_DAMAGE", name: "BOMB_DAMAGE", widget: "number" }
+          - { label: "GHOST_DISPLAY_WIDTH", name: "GHOST_DISPLAY_WIDTH", widget: "number", value_type: "float", step: 0.1 }
+          - { label: "GHOST_DISPLAY_HEIGHT", name: "GHOST_DISPLAY_HEIGHT", widget: "number", value_type: "float", step: 0.1 }
+          - { label: "GHOST_SPEEDS", name: "GHOST_SPEEDS", widget: "list", field: { label: "Speed", name: "speed", widget: "number" } }
           
   - name: "vfx"
     label: "VFX Config"
@@ -137,3 +140,102 @@ collections:
                     name: "blendMode"
                     widget: "select"
                     options: ["NORMAL", "ADD", "MULTIPLY", "SCREEN"]
+              - label: "Smoke Effect (Ghost / Дым призрака)"
+                name: "smoke"
+                widget: "object"
+                fields:
+                  - { label: "Texture Key (Имя ассета частицы)", name: "textureKey", widget: "string" }
+                  - { label: "Size Px (Базовый размер в пикселях)", name: "particleSizePx", widget: "number" }
+                  - { label: "Depth Offset (Слой относительно объекта: -1 сзади, 1 спереди)", name: "depthOffset", widget: "number" }
+                  - { label: "Offset X (Смещение по горизонтали)", name: "followOffsetX", widget: "number" }
+                  - { label: "Offset Y Factor (Множитель высоты объекта для позиции)", name: "followOffsetYFactor", widget: "number", step: 0.1 }
+
+                  - label: "Scale (Масштаб)"
+                    name: "scale"
+                    widget: "object"
+                    fields:
+                      - { label: "Start (Начальный)", name: "start", widget: "number", step: 0.1 }
+                      - { label: "End (Конечный)", name: "end", widget: "number", step: 0.1 }
+
+                  - label: "Alpha (Прозрачность)"
+                    name: "alpha"
+                    widget: "object"
+                    fields:
+                      - { label: "Start (Начальная)", name: "start", widget: "number", step: 0.05, min: 0, max: 1 }
+                      - { label: "End (Конечная)", name: "end", widget: "number", step: 0.05, min: 0, max: 1 }
+
+                  - label: "Speed (Скорость разлета)"
+                    name: "speed"
+                    widget: "object"
+                    fields:
+                      - { label: "Min (Минимальная)", name: "min", widget: "number" }
+                      - { label: "Max (Максимальная)", name: "max", widget: "number" }
+
+                  - label: "Angle (Угол испускания в градусах)"
+                    name: "angle"
+                    widget: "object"
+                    fields:
+                      - { label: "Min (Минимальный)", name: "min", widget: "number" }
+                      - { label: "Max (Максимальный)", name: "max", widget: "number" }
+
+                  - { label: "Trail Velocity Factor (Множитель скорости шлейфа)", name: "trailVelocityFactor", widget: "number" }
+                  - { label: "Trail Random (Разброс скорости шлейфа)", name: "trailRandom", widget: "number" }
+                  - { label: "Gravity Y (Сила тяжести: отрицательная тянет вверх)", name: "gravityY", widget: "number" }
+                  - { label: "Quantity (Кол-во за один раз)", name: "quantity", widget: "number" }
+                  - { label: "Lifespan (Время жизни мс)", name: "lifespan", widget: "number" }
+                  - { label: "Frequency (Частота выпуска мс)", name: "frequency", widget: "number" }
+                  - { label: "Tint Color (Цвет в формате числа, например 4934475)", name: "tint", widget: "number" }
+                  - label: "Blend Mode (Режим смешивания)"
+                    name: "blendMode"
+                    widget: "select"
+                    options: [ "NORMAL", "ADD", "MULTIPLY", "SCREEN" ]
+              - label: "Fire Effect (Ghost / Огонь призрака)"
+                name: "fire"
+                widget: "object"
+                fields:
+                  - { label: "Texture Key (Имя ассета частицы)", name: "textureKey", widget: "string" }
+                  - { label: "Size Px (Базовый размер в пикселях)", name: "particleSizePx", widget: "number" }
+                  - { label: "Depth Offset (Слой относительно объекта: -1 сзади, 1 спереди)", name: "depthOffset", widget: "number" }
+                  - { label: "Offset X (Смещение по горизонтали)", name: "followOffsetX", widget: "number" }
+                  - { label: "Offset Y Factor (Множитель высоты объекта для позиции)", name: "followOffsetYFactor", widget: "number", step: 0.1 }
+
+                  - label: "Scale (Масштаб)"
+                    name: "scale"
+                    widget: "object"
+                    fields:
+                      - { label: "Start (Начальный)", name: "start", widget: "number", step: 0.1 }
+                      - { label: "End (Конечный)", name: "end", widget: "number", step: 0.1 }
+
+                  - label: "Alpha (Прозрачность)"
+                    name: "alpha"
+                    widget: "object"
+                    fields:
+                      - { label: "Start (Начальная)", name: "start", widget: "number", step: 0.05, min: 0, max: 1 }
+                      - { label: "End (Конечная)", name: "end", widget: "number", step: 0.05, min: 0, max: 1 }
+
+                  - label: "Speed (Скорость разлета)"
+                    name: "speed"
+                    widget: "object"
+                    fields:
+                      - { label: "Min (Минимальная)", name: "min", widget: "number" }
+                      - { label: "Max (Максимальная)", name: "max", widget: "number" }
+
+                  - label: "Angle (Угол испускания в градусах)"
+                    name: "angle"
+                    widget: "object"
+                    fields:
+                      - { label: "Min (Минимальный)", name: "min", widget: "number" }
+                      - { label: "Max (Максимальный)", name: "max", widget: "number" }
+
+                  - { label: "Gravity Y (Сила тяжести: отрицательная тянет вверх)", name: "gravityY", widget: "number" }
+                  - { label: "Quantity (Кол-во за один раз)", name: "quantity", widget: "number" }
+                  - { label: "Lifespan (Время жизни мс)", name: "lifespan", widget: "number" }
+                  - { label: "Frequency (Частота выпуска мс)", name: "frequency", widget: "number" }
+                  - label: "Tint Colors (Цвета частиц в формате списка чисел)"
+                    name: "tint"
+                    widget: "list"
+                    field: { label: "Цвет (Число, например 16766287)", name: "color", widget: "number" }
+                  - label: "Blend Mode (Режим смешивания)"
+                    name: "blendMode"
+                    widget: "select"
+                    options: [ "NORMAL", "ADD", "MULTIPLY", "SCREEN" ]

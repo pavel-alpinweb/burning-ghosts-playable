@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { playableComposition } from "@/compositions/Playable.composition.js";
+import { ghostComposition } from "@/compositions/Ghost.composition.js";
 import { audioComposition } from "@/compositions/Audio.composition.js";
 import audioPlayableConfigs from "@/configs/audioPlayable.config.json";
 import mountainsAudio from "@public/assets/audio/mountains-sounds-min.mp3";
@@ -21,6 +22,8 @@ export default class PreloadScenePlayable extends Phaser.Scene {
 
   preload() {
     playableComposition.preloadPlayerAnimation(this);
+    playableComposition.preloadGhostAnimation(this);
+    playableComposition.preloadParticlesTextures(this);
     playableComposition.preloadLevel(this);
     const audioConfigs = audioPlayableConfigs.map((config) => ({
       ...config,

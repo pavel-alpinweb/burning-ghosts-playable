@@ -15,7 +15,8 @@ export const topdownMapComposition = {
     const groundLayer = tilemapComposition.createTileLayer(map, "floor-wall-roof", "ground_layer", [0]);
     const wallsLayer = tilemapComposition.createTileLayer(map, "floor-wall-roof", "walls_layer", [1]);
     const playerSpawnLayer = tilemapComposition.getFromObjectLayer(map, "spawns_layer", { name: "playerSpawn" });
+    const ghostSpawnLayer = tilemapComposition.getFromObjectLayer(map, "spawns_layer", { name: "ghostSpawn" });
 
-    return [map, groundLayer, playerSpawnLayer, wallsLayer];
+    return [map, groundLayer, playerSpawnLayer, wallsLayer, ghostSpawnLayer];
   }
 };

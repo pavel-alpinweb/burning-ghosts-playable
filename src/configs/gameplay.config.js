@@ -1,4 +1,3 @@
-// ... existing code ...
 /* PLAYER SETTINGS */
 import gameplay from "@/content/configs/gameplay.json";
 
@@ -15,3 +14,8 @@ export const PLAYER_MAX_HEALTH = gameplay.PLAYER_MAX_HEALTH;
 export const PLAYER_CURRENT_HEALTH = gameplay.PLAYER_CURRENT_HEALTH;
 export const HEAL_VALUE = gameplay.HEAL_VALUE;
 export const BOMB_DAMAGE = gameplay.BOMB_DAMAGE;
+
+/* GHOST SETTINGS */
+export const GHOST_DISPLAY_WIDTH = gameplay.GHOST_DISPLAY_WIDTH;
+export const GHOST_DISPLAY_HEIGHT = gameplay.GHOST_DISPLAY_HEIGHT;
+export const GHOST_SPEEDS = gameplay.GHOST_SPEEDS;

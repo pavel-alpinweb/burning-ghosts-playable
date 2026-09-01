@@ -4,8 +4,12 @@ import playerWaitPNG from "@public/assets/animation/player/player-idle.png";
 import playerWaitJSON from "@public/assets/animation/player/player-idle.json";
 import playerMovePNG from "@public/assets/animation/player/player-run.png";
 import playerMoveJSON from "@public/assets/animation/player/player-run.json";
+import ghostGhostPNG from "@public/assets/animation/ghost/trainer-hunt.png";
+import ghostGhostJSON from "@public/assets/animation/ghost/trainer-hunt.json";
 import floor from "@public/assets/levels/tiles/floor-wall-roof.png";
 import topdownTilemap from "@public/assets/levels/tilemaps/topdown.json";
+import smoke from "@public/assets/vfx/smoke-puff.png";
+import fire from "@public/assets/vfx/yellow.png";
 
 export const playableComposition = {
   preloadPlayerAnimation(scene) {
@@ -13,9 +17,28 @@ export const playableComposition = {
     scene.load.atlas("player_move", playerMovePNG, playerMoveJSON);
   },
 
+  preloadGhostAnimation(scene) {
+    scene.load.atlas("ghost", ghostGhostPNG, ghostGhostJSON);
+  },
+
   preloadLevel(scene) {
     scene.load.image("floor-wall-roof", floor);
     scene.load.tilemapTiledJSON("topdown-tilemap", topdownTilemap);
+  },
+
+  preloadParticlesTextures(scene) {
+    scene.load.image("smoke-puff-particle", smoke);
+    scene.load.image("fire-particle", fire);
+  },
+
+
+  prepareGhostAnimation(scene) {
+    scene.anims.create({
+      key: "ghost",
+      frames: scene.anims.generateFrameNames("ghost"),
+      frameRate: 16,
+      repeat: -1,
+    });
   },
 
   preparePlayerAnimations(scene) {

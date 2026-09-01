@@ -9,6 +9,7 @@ import { particlesComposition } from "@/compositions/Particles.composition.js";
 import particlesConfig from "@/configs/particles.json";
 import { smoudComposition } from "@/compositions/Smoud.composition.js";
 import { sceneComposition } from "@/compositions/scene.composition.js";
+import {ghostComposition} from "@/compositions/Ghost.composition.js";
 
 export default class PlayableScene extends Phaser.Scene {
   constructor() {
@@ -17,7 +18,8 @@ export default class PlayableScene extends Phaser.Scene {
 
   create() {
     playableComposition.preparePlayerAnimations(this);
-    const [map, groundLayer, playerSpawnLayer, wallsLayer] = topdownMapComposition.createLevel(this);
+    playableComposition.prepareGhostAnimation(this);
+    const [map, groundLayer, playerSpawnLayer, wallsLayer, ghostSpawnLayer] = topdownMapComposition.createLevel(this);
     this.map = map;
     this.groundLayer = groundLayer;
 
@@ -43,6 +45,8 @@ export default class PlayableScene extends Phaser.Scene {
       playerComposition.updatePlayerAimFromPointer(this, this.player, this.groundLayer, pointer);
     });
 
+    this.ghost = ghostComposition.createGhost(this, ghostSpawnLayer);
+
     audioComposition.createAudioForScene(this, audioPlayableConfigs);
     audioComposition.play(this, "mountains-sounds");
     playableComposition.freezeGamePlay(this);
@@ -67,5 +71,6 @@ export default class PlayableScene extends Phaser.Scene {
     }
 
     playerComposition.movePlayerOnTopDownWithMouse(this.player, this, delta);
+    ghostComposition.moveGhost(this.ghost, this.player);
   }
 }

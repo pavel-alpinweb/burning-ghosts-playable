@@ -71,9 +71,9 @@ function createFollowParticlesEmitter(scene, object, vfxConfig) {
   const textureScale = getParticleTextureScale(scene, actualTextureKey, vfxConfig.particleSizePx);
 
   const {
-    followOffsetX = 0,
-    followOffsetYFactor = 0,
-    depthOffset = 0,
+    followOffsetX,
+    followOffsetYFactor,
+    depthOffset,
     particleSizePx,
     textureKey,
     ...emitterConfig
