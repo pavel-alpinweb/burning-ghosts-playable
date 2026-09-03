@@ -14,7 +14,24 @@ export const timerComposition = {
         this.elapsedTime = 0;
     },
 
-    renderTimer(percent) {
+    renderTimer(percent, element = "#time-progress") {
+        const timeProgress = typeof element === "string" ? document.querySelector(element) : element;
 
+        if (!timeProgress) return;
+
+        const clampedPercent = Math.max(0, Math.min(100, Number(percent) || 0));
+        const progress = clampedPercent / 100;
+        const valueBar = timeProgress.querySelector(".time-progress__value");
+        const fireIcon = timeProgress.querySelector(".time-progress__fire");
+
+        if (valueBar) {
+            valueBar.style.transform = `scaleX(${progress})`;
+        }
+
+        if (fireIcon) {
+            fireIcon.style.left = `${(1 - progress) * 100}%`;
+        }
+
+        timeProgress.setAttribute("aria-valuenow", String(Math.round(clampedPercent)));
     },
 };
