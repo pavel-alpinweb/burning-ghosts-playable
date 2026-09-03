@@ -13,4 +13,8 @@ export const timerComposition = {
     reset() {
         this.elapsedTime = 0;
     },
+
+    renderTimer(percent) {
+
+    },
 };
