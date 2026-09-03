@@ -73,6 +73,7 @@ collections:
           - { label: "GHOST_DISPLAY_WIDTH", name: "GHOST_DISPLAY_WIDTH", widget: "number", value_type: "float", step: 0.1 }
           - { label: "GHOST_DISPLAY_HEIGHT", name: "GHOST_DISPLAY_HEIGHT", widget: "number", value_type: "float", step: 0.1 }
           - { label: "GHOST_SPEEDS", name: "GHOST_SPEEDS", widget: "list", field: { label: "Speed", name: "speed", widget: "number" } }
+          - { label: "FULL_TIME", name: "FULL_TIME", widget: "number" }
           
   - name: "vfx"
     label: "VFX Config"

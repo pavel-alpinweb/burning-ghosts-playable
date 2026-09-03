@@ -6,18 +6,13 @@ import { audioComposition } from "@/compositions/Audio.composition.js";
 import { timerComposition } from "@/compositions/Timer.composition.js";
 import * as Config from "@/configs/gameplay.config.js";
 import audioPlayableConfigs from "@/configs/audioPlayable.config.json";
-import { particlesComposition } from "@/compositions/Particles.composition.js";
-import particlesConfig from "@/configs/particles.json";
 import { smoudComposition } from "@/compositions/Smoud.composition.js";
 import { sceneComposition } from "@/compositions/scene.composition.js";
 import { ghostComposition } from "@/compositions/Ghost.composition.js";
-
-const FULL_TIME = 20000;
-
 export default class PlayableScene extends Phaser.Scene {
   constructor() {
     super("PlayableScene");
-    this.fullTime = FULL_TIME;
+    this.fullTime = Config.FULL_TIME;
   }
 
   create() {

@@ -19,3 +19,6 @@ export const BOMB_DAMAGE = gameplay.BOMB_DAMAGE;
 export const GHOST_DISPLAY_WIDTH = gameplay.GHOST_DISPLAY_WIDTH;
 export const GHOST_DISPLAY_HEIGHT = gameplay.GHOST_DISPLAY_HEIGHT;
 export const GHOST_SPEEDS = gameplay.GHOST_SPEEDS;
+
+/* TIMER SETTINGS */
+export const FULL_TIME = gameplay.FULL_TIME;
