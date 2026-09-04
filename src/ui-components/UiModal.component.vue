@@ -124,7 +124,8 @@ const contentStyles = computed(() => {
 .ui-modal {
   &__overlay {
     pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -133,11 +134,12 @@ const contentStyles = computed(() => {
   }
   &__content {
     box-sizing: border-box;
-    background: #858f64;
-    border-radius: 12px;
+    background: rgba(18, 18, 24, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
     overflow-y: auto;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   }
 }
 </style>

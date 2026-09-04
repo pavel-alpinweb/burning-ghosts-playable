@@ -33,6 +33,7 @@ export default class PlayableScene extends Phaser.Scene {
       Config.PLAYER_SPEED,
       Config.PLAYER_MAX_HEALTH
     );
+    timerComposition.reset();
     timerComposition.renderTimer(100);
 
     playerComposition.configureCameraFollow(this, this.player, this.cameras.main.width / 4, this.cameras.main.height / 4, 0.7);
@@ -44,11 +45,12 @@ export default class PlayableScene extends Phaser.Scene {
       playerComposition.updatePlayerAimFromPointer(this, this.player, this.groundLayer, pointer);
     });
 
-    this.ghost = ghostComposition.createGhost(this, ghostSpawnLayer);
+    this.ghost = ghostComposition.createGhost(this, ghostSpawnLayer, this.player);
 
     audioComposition.createAudioForScene(this, audioPlayableConfigs);
     audioComposition.play(this, "mountains-sounds");
     playableComposition.freezeGamePlay(this);
+    playableComposition.restartGame(this);
 
     smoudComposition.onPause(() => {
       playableComposition.freezeGamePlay(this);
@@ -62,7 +64,7 @@ export default class PlayableScene extends Phaser.Scene {
   }
 
   update(time, delta) {
-    const remainingPercent = timerComposition.updateTime(delta, this.fullTime);
+    const remainingPercent = timerComposition.updateTime(delta, this.fullTime, this);
     timerComposition.renderTimer(remainingPercent);
 
     const pointer = this.input.activePointer;

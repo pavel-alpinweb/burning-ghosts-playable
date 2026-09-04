@@ -3,6 +3,15 @@ import PreloadScenePlayable from "@/scenes/PreloadPlayable.scene.js";
 import PlayableScene from "@/scenes/Playable.scene.js";
 import { smoudComposition } from "@/compositions/Smoud.composition.js";
 
+import winnerImgSrc from "@public/assets/img/Winner_stamp.png";
+import loserImgSrc from "@public/assets/img/Loser_stamp.png";
+
+const winImg = document.querySelector("#game-result-img-win");
+const loseImg = document.querySelector("#game-result-img-lose");
+
+if (winImg) winImg.src = winnerImgSrc;
+if (loseImg) loseImg.src = loserImgSrc;
+
 const DEFAULT_WIDTH = 720;
 const DEFAULT_HEIGHT = 1280;
 

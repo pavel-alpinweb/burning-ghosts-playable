@@ -10,6 +10,7 @@ import floor from "@public/assets/levels/tiles/floor-wall-roof.png";
 import topdownTilemap from "@public/assets/levels/tilemaps/topdown.json";
 import smoke from "@public/assets/vfx/smoke-puff.png";
 import fire from "@public/assets/vfx/yellow.png";
+import {resultsComposition} from "@/compositions/Results.composition.js";
 
 export const playableComposition = {
   preloadPlayerAnimation(scene) {
@@ -31,45 +32,56 @@ export const playableComposition = {
     scene.load.image("fire-particle", fire);
   },
 
-
   prepareGhostAnimation(scene) {
-    scene.anims.create({
-      key: "ghost",
-      frames: scene.anims.generateFrameNames("ghost"),
-      frameRate: 16,
-      repeat: -1,
-    });
+    if (!scene.anims.exists("ghost")) {
+      scene.anims.create({
+        key: "ghost",
+        frames: scene.anims.generateFrameNames("ghost"),
+        frameRate: 16,
+        repeat: -1,
+      });
+    }
   },
 
   preparePlayerAnimations(scene) {
-    scene.anims.create({
-      key: "player_wait",
-      frames: scene.anims.generateFrameNames("player_wait"),
-      frameRate: 16,
-      repeat: -1,
-    });
-    scene.anims.create({
-      key: "player_move",
-      frames: scene.anims.generateFrameNames("player_move"),
-      frameRate: 24,
-      repeat: -1,
-    });
+    if (!scene.anims.exists("player_wait")) {
+      scene.anims.create({
+        key: "player_wait",
+        frames: scene.anims.generateFrameNames("player_wait"),
+        frameRate: 16,
+        repeat: -1,
+      });
+    }
+    if (!scene.anims.exists("player_move")) {
+      scene.anims.create({
+        key: "player_move",
+        frames: scene.anims.generateFrameNames("player_move"),
+        frameRate: 24,
+        repeat: -1,
+      });
+    }
   },
 
-  freezeGamePlay(scene) {
+  freezeGamePlay(scene, canResume = true) {
+    const splash = document.querySelector("#splash");
+
+    if (canResume && !splash) {
+      scene.physics.world.resume();
+      scene.anims.resumeAll();
+      return;
+    }
+
     scene.physics.world.pause();
     scene.anims.pauseAll();
     audioComposition.updateGlobalVolume(scene, false);
-
-    const splash = document.querySelector("#splash");
 
     if (splash) {
       splash.classList.add("is-ready");
       splash.setAttribute("role", "button");
       splash.setAttribute("aria-label", "Tap to move");
-      splash.addEventListener("pointerdown", () => this.startGamePlay(scene), { once: true });
-    } else {
-      scene.input.once("pointerdown", () => this.startGamePlay(scene));
+      if (canResume) {
+        splash.addEventListener("pointerdown", () => this.startGamePlay(scene), { once: true });
+      }
     }
 
     scene.scene.pause();
@@ -89,25 +101,16 @@ export const playableComposition = {
     document.querySelector("#splash")?.remove();
   },
 
-  updateHealthBar(player, element) {
-    const healthBar = typeof element === "string" ? document.querySelector(element) : element;
+  restartGame(scene) {
+    const btn = document.querySelector("#game-result-btn");
+    if (!btn) return;
 
-    if (!healthBar) return;
-
-    const maxHealth = Math.max(Number(player.maxHealth) || 0, 0);
-    const currentHealth = Phaser.Math.Clamp(Number(player.currentHealth) || 0, 0, maxHealth);
-    const healthPercentage = maxHealth > 0 ? (currentHealth / maxHealth) * 100 : 0;
-    const color = healthPercentage >= 60 ? "#95c11f" : healthPercentage >= 40 ? "#ffff00" : "#8a0000";
-    const icon = healthBar.querySelector(".health-bar__icon");
-    const fuelBar = healthBar.querySelector(".health-bar__fuel-bar");
-
-    if (icon) icon.style.color = color;
-    if (fuelBar) {
-      fuelBar.style.width = `${healthPercentage}%`;
-      fuelBar.style.backgroundColor = color;
-    }
-
-    healthBar.setAttribute("aria-valuenow", String(currentHealth));
-    healthBar.setAttribute("aria-valuemax", String(maxHealth));
+    btn.onclick = () => {
+      resultsComposition.showModal(false);
+      scene.physics.world.resume();
+      scene.anims.resumeAll();
+      scene.scene.resume();
+      scene.scene.restart();
+    };
   },
 };

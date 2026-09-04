@@ -1,10 +1,12 @@
 import Phaser from "phaser";
-import { particlesComposition } from "@/compositions/Particles.composition.js";
-import { GHOST_VFX } from "@/configs/particles.config.js";
 import { GHOST_DISPLAY_WIDTH, GHOST_DISPLAY_HEIGHT, GHOST_SPEEDS } from "@/configs/gameplay.config.js";
+import { playableComposition } from "@/compositions/Playable.composition.js";
+import { resultsComposition } from "@/compositions/Results.composition.js";
+import {particlesComposition} from "@/compositions/Particles.composition.js";
+import {GHOST_VFX} from "@/configs/particles.config.js";
 
 export const ghostComposition = {
-    createGhost(scene, startPointsLayer) {
+    createGhost(scene, startPointsLayer, player = scene.player) {
         const { x: startPointX, y: startPointY } = startPointsLayer;
         const ghost = scene.physics.add.sprite(startPointX, startPointY, "ghost")
             .setOrigin(0.5, 1)
@@ -17,6 +19,15 @@ export const ghostComposition = {
 
         particlesComposition.initObjectVFX(scene, ghost, ["smoke", "fire"], GHOST_VFX);
         ghost.play("ghost");
+
+        const targetPlayer = player || scene.player;
+        if (targetPlayer) {
+            scene.physics.add.overlap(ghost, targetPlayer, () => {
+                playableComposition.freezeGamePlay(scene, false);
+                resultsComposition.showModal(true, false);
+            });
+        }
+        
         return ghost;
     },
 

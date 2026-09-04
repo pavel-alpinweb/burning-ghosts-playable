@@ -166,6 +166,129 @@
         @media (prefers-reduced-motion: reduce) {
             .tap-prompt svg { animation: none; }
         }
+
+        .ui-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            transition: opacity 0.3s ease;
+        }
+
+        .ui-modal.is-hidden {
+            display: none;
+        }
+
+        .ui-modal__content {
+            box-sizing: border-box;
+            width: min(520px, calc(100% - 32px));
+            max-width: 520px;
+            max-height: calc(100% - 32px);
+            padding: 24px;
+            overflow-y: auto;
+            background: rgba(18, 18, 24, 0.85);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .game-result-modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            user-select: none;
+            font-family: sans-serif;
+        }
+
+        .game-result-modal__title {
+            margin: 0;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow:
+                0 2px 10px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .game-result-modal__image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .game-result-modal__image img {
+            display: block;
+            width: 100%;
+            max-height: 260px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .game-result-modal__image img.is-hidden {
+            display: none;
+        }
+
+        .game-result-modal__text {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .game-result-modal__actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .game-result-modal__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 12px 28px;
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        .game-result-modal__btn:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .game-result-modal__btn:active {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -206,6 +329,21 @@
             <path d="M95.000,183.812 C104.250,183.812 104.250,200.941 116.000,223.812 C123.824,239.041 112.121,254.812 95.000,254.812 C77.879,254.812 69.000,240.933 69.000,223.812 C69.000,206.692 85.750,183.812 95.000,183.812 Z" id="path-3" class="cls-5" fill-rule="evenodd"/>
         </g>
     </svg>
+</div>
+<div id="game-result-modal" class="ui-modal is-hidden" role="dialog" aria-modal="true" aria-labelledby="game-result-title">
+    <div class="ui-modal__content">
+        <div class="game-result-modal">
+            <h2 id="game-result-title" class="game-result-modal__title">Ты выжил!</h2>
+            <div class="game-result-modal__image">
+                <img id="game-result-img-win" class="game-result-modal__img" src="../../public/assets/img/Winner_stamp.png" alt="Ты выжил!" />
+                <img id="game-result-img-lose" class="game-result-modal__img is-hidden" src="../../public/assets/img/Loser_stamp.png" alt="Ты погиб!" />
+            </div>
+            <div class="game-result-modal__actions">
+                <button id="game-result-btn" class="game-result-modal__btn" type="button">Заново</button>
+                <a id="game-result-link" class="game-result-modal__btn" href="https://alpinweb.itch.io/borning-run" target="_blank" rel="noopener noreferrer">Играть в полную версию</a>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="game"></div>
 <script type="module" src="./main.js"></script>

@@ -1,17 +1,30 @@
+import {playableComposition} from "@/compositions/Playable.composition.js";
+import {resultsComposition} from "@/compositions/Results.composition.js";
+
 export const timerComposition = {
     elapsedTime: 0,
+    isEnded: false,
 
-    updateTime(deltaTime, fullTime) {
+    updateTime(deltaTime, fullTime, scene) {
         if (!fullTime || fullTime <= 0) return 0;
 
         this.elapsedTime += deltaTime;
         const remainingTime = Math.max(0, fullTime - this.elapsedTime);
+
+        if (remainingTime <= 0 && !this.isEnded) {
+            this.isEnded = true;
+            if (scene) {
+                playableComposition.freezeGamePlay(scene, false);
+            }
+            resultsComposition.showModal(true, true);
+        }
 
         return Math.max(0, Math.min(100, (remainingTime / fullTime) * 100));
     },
 
     reset() {
         this.elapsedTime = 0;
+        this.isEnded = false;
     },
 
     renderTimer(percent, element = "#time-progress") {
