@@ -4,6 +4,17 @@ if (typeof window !== "undefined" && typeof window.AD_NETWORK === "undefined" &&
   window.AD_NETWORK = "generic";
 }
 
+const getAdNetwork = () => {
+  if (typeof AD_NETWORK !== "undefined") return AD_NETWORK;
+  if (typeof window !== "undefined" && typeof window.AD_NETWORK !== "undefined") return window.AD_NETWORK;
+  return "generic";
+};
+
+const getStoreUrl = () => {
+  if (typeof STORE_URL !== "undefined" && STORE_URL) return STORE_URL;
+  return "";
+};
+
 export const smoudComposition = {
   init(onReady) {
     try {
@@ -36,7 +47,23 @@ export const smoudComposition = {
 
   install() {
     try {
+      const adNetwork = String(getAdNetwork()).toLowerCase();
+      const storeUrl = getStoreUrl();
+
+      if (typeof window !== "undefined") {
+        window.AD_NETWORK = adNetwork;
+      }
+
+      if (adNetwork === "google" && typeof window !== "undefined" && window.ExitApi && typeof window.ExitApi.exit === "function") {
+        window.ExitApi.exit();
+        return;
+      }
+
       sdk.install();
+
+      if (typeof window !== "undefined" && storeUrl) {
+        window.open(storeUrl, "_blank", "noopener,noreferrer");
+      }
     } catch (e) {
       console.warn("[Smoud] install failed:", e);
     }

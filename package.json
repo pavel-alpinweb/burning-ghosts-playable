@@ -8,10 +8,10 @@
   "author": "bakuardgamestudio@gmail.com, https://alpinweb.com",
   "scripts": {
     "dev": "vite",
-    "dev:playable": "vite --config vite.playable.config.js",
+    "dev:playable": "vite --config vite.playable.config.js --mode playable",
     "dev:cms": "vite & npx decap-server --port 8082",
     "build": "vite build",
-    "build:playable": "vite build --config vite.playable.config.js",
+    "build:playable": "vite build --config vite.playable.config.js --mode playable",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

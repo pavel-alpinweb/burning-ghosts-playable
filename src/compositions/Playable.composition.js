@@ -10,7 +10,8 @@ import floor from "@public/assets/levels/tiles/floor-wall-roof.png";
 import topdownTilemap from "@public/assets/levels/tilemaps/topdown.json";
 import smoke from "@public/assets/vfx/smoke-puff.png";
 import fire from "@public/assets/vfx/yellow.png";
-import {resultsComposition} from "@/compositions/Results.composition.js";
+import { resultsComposition } from "@/compositions/Results.composition.js";
+import { smoudComposition } from "@/compositions/Smoud.composition.js";
 
 export const playableComposition = {
   preloadPlayerAnimation(scene) {
@@ -99,6 +100,18 @@ export const playableComposition = {
     scene.anims.resumeAll();
     scene.scene.resume();
     document.querySelector("#splash")?.remove();
+  },
+
+  bindCta() {
+    const cta = document.querySelector("#game-result-link");
+    if (!cta) return;
+
+    cta.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      smoudComposition.install();
+    });
   },
 
   restartGame(scene) {

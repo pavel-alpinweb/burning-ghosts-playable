@@ -51,6 +51,7 @@ export default class PlayableScene extends Phaser.Scene {
     audioComposition.play(this, "mountains-sounds");
     playableComposition.freezeGamePlay(this);
     playableComposition.restartGame(this);
+    playableComposition.bindCta();
 
     smoudComposition.onPause(() => {
       playableComposition.freezeGamePlay(this);

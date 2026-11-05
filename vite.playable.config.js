@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { minify } from "html-minifier-terser";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -75,37 +75,44 @@ const minifySingleFileHtml = () => ({
   },
 });
 
-export default defineConfig({
-  root: path.resolve(__dirname, "./src/playable"),
-  base: "./",
-  define: {
-    AD_NETWORK: JSON.stringify(process.env.AD_NETWORK || "generic"),
-  },
-  plugins: [
-    viteSingleFile(),
-    minifySingleFileHtml(),
-    visualizer({
-      filename: path.resolve(__dirname, "./dist-playable/stats-playable.html"),
-      template: "treemap",
-      gzipSize: true,
-      brotliSize: true,
-      open: true,
-    }),
-  ].filter(Boolean),
-  build: {
-    outDir: path.resolve(__dirname, "./dist-playable"),
-    emptyOutDir: true,
-    assetsInlineLimit: 100_000_000,
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  const adNetwork = env.VITE_AD_NETWORK || env.AD_NETWORK || "generic";
+  const storeUrl = env.VITE_STORE_URL || "";
 
-    cssCodeSplit: false,
-    sourcemap: false,
-  },
-  resolve: {
-    alias: {
-      // eslint-disable-next-line
-      "@": path.resolve(__dirname, "./src"),
-      "@public": path.resolve(__dirname, "./public"),
-      phaser: path.resolve(__dirname, "./node_modules/phaser/dist/phaser-arcade-physics.js"),
+  return {
+    root: path.resolve(__dirname, "./src/playable"),
+    base: "./",
+    define: {
+      AD_NETWORK: JSON.stringify(adNetwork),
+      STORE_URL: JSON.stringify(storeUrl),
     },
-  },
+    plugins: [
+      viteSingleFile(),
+      minifySingleFileHtml(),
+      visualizer({
+        filename: path.resolve(__dirname, "./dist-playable/stats-playable.html"),
+        template: "treemap",
+        gzipSize: true,
+        brotliSize: true,
+        open: true,
+      }),
+    ].filter(Boolean),
+    build: {
+      outDir: path.resolve(__dirname, "./dist-playable"),
+      emptyOutDir: true,
+      assetsInlineLimit: 100_000_000,
+
+      cssCodeSplit: false,
+      sourcemap: false,
+    },
+    resolve: {
+      alias: {
+        // eslint-disable-next-line
+        "@": path.resolve(__dirname, "./src"),
+        "@public": path.resolve(__dirname, "./public"),
+        phaser: path.resolve(__dirname, "./node_modules/phaser/dist/phaser-arcade-physics.js"),
+      },
+    },
+  };
 });
