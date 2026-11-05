@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { minify } from "html-minifier-terser";
+import { visualizer } from "rollup-plugin-visualizer";
 import path from "path";
 
 const byteLength = (value) => new TextEncoder().encode(value).byteLength;
@@ -80,7 +81,17 @@ export default defineConfig({
   define: {
     AD_NETWORK: JSON.stringify(process.env.AD_NETWORK || "generic"),
   },
-  plugins: [viteSingleFile(), minifySingleFileHtml()],
+  plugins: [
+    viteSingleFile(),
+    minifySingleFileHtml(),
+    visualizer({
+      filename: path.resolve(__dirname, "./dist-playable/stats-playable.html"),
+      template: "treemap",
+      gzipSize: true,
+      brotliSize: true,
+      open: true,
+    }),
+  ].filter(Boolean),
   build: {
     outDir: path.resolve(__dirname, "./dist-playable"),
     emptyOutDir: true,
@@ -94,6 +105,7 @@ export default defineConfig({
       // eslint-disable-next-line
       "@": path.resolve(__dirname, "./src"),
       "@public": path.resolve(__dirname, "./public"),
+      phaser: path.resolve(__dirname, "./node_modules/phaser/dist/phaser-arcade-physics.js"),
     },
   },
 });
