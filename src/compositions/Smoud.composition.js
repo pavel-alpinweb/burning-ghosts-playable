@@ -1,32 +1,44 @@
 import { sdk } from "@smoud/playable-sdk";
 
-if (typeof window !== "undefined" && typeof window.AD_NETWORK === "undefined" && typeof AD_NETWORK === "undefined") {
-  window.AD_NETWORK = "generic";
-}
-
-const getAdNetwork = () => {
+function getAdNetwork() {
   if (typeof AD_NETWORK !== "undefined") return AD_NETWORK;
   if (typeof window !== "undefined" && typeof window.AD_NETWORK !== "undefined") return window.AD_NETWORK;
   return "generic";
-};
+}
 
-const getStoreUrl = () => {
+function getStoreUrl() {
   if (typeof STORE_URL !== "undefined" && STORE_URL) return STORE_URL;
   return "";
-};
+}
+
+if (typeof window !== "undefined") {
+  window.AD_NETWORK = String(getAdNetwork()).toLowerCase();
+}
 
 export const smoudComposition = {
   init(onReady) {
+    let initialized = false;
+
+    const safeReady = (width, height) => {
+      if (initialized) return;
+      initialized = true;
+      if (typeof onReady === "function") {
+        onReady(width || window.innerWidth, height || window.innerHeight);
+      }
+    };
+
     try {
       sdk.init((width, height) => {
-        onReady(width, height);
+        safeReady(width, height);
       });
     } catch (error) {
       console.warn("[Smoud] SDK init failed, running fallback mode:", error);
-      if (typeof onReady === "function") {
-        onReady(window.innerWidth, window.innerHeight);
-      }
+      safeReady(window.innerWidth, window.innerHeight);
     }
+
+    setTimeout(() => {
+      safeReady(window.innerWidth, window.innerHeight);
+    }, 300);
   },
 
   start() {
@@ -59,9 +71,14 @@ export const smoudComposition = {
         return;
       }
 
+      if (typeof window !== "undefined" && window.mraid && typeof window.mraid.open === "function") {
+        window.mraid.open(storeUrl);
+        return;
+      }
+
       sdk.install();
 
-      if (typeof window !== "undefined" && storeUrl) {
+      if (typeof window !== "undefined" && storeUrl && (!window.mraid || typeof window.mraid.open !== "function")) {
         window.open(storeUrl, "_blank", "noopener,noreferrer");
       }
     } catch (e) {
